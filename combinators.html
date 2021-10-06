@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combinators</title>
+
+    <!--
+        Les sélecteurs permettent d'appliquer des règles de style à un ensemble de tags.
+        On distingue principalement 4 combinaisons:
+        - descendant
+        - enfant
+        - sibling
+        - general sibling
+        Exemple:
+        --------
+        Descendant: tag tag (ex: div p). Affecte tous les tags p y compris ceux imbriqués.
+        Enfant: tag > tag (ex: div + h3).  Affecte tous les tags ENFANT qui suivent directement le tag parent.
+        Sibling: tag + tag (ex: div + h3). Affecte le 1er élément SUIVANT (pas enfant) le tag parent.
+        General sibling: (ex: tag ~ tag).  Affecte tous les tags qui SUIVENT directement le tag parent.
+    -->
+    <style>
+        h3 + p {
+            color: darkslategray;
+        }
+        div ~ p {
+            color: darksalmon;
+        } 
+        div + p {
+            font-size: 1.6em;
+            color:blueviolet;
+        }
+        div  > p {
+            font-size: 1em;
+            color: rgb(165, 142, 42);
+        }
+         img + p {
+            font-weight: bolder;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+             color: burlywood; 
+        }
+    </style>
+</head>
+<body>
+    <img src="" alt=""> <p>élément ciblé par le sélecteur <b>img + p</b></p>
+    <p>élément non ciblé</p>
+    <h3>Titre de niveau 3</h3>
+    <p>élément ciblé par le sélecteur <b>h3 + p/<b>.</p>
+    
+    <div>
+        <p>élément ciblé par le sélecteur <b>div > p</b></p>
+    </div>
+    <p>élément ciblé par le sélecteur + </p>
+    <p>élément ciblé par le sélecteur ~</p>
+</body>
+</html>
