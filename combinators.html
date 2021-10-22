@@ -12,6 +12,11 @@
         - enfant
         - sibling
         - general sibling
+
+        > s'applique aux tags enfants Ex: div > p s'applique aux tags p imbriqués dans div
+        + s'applique au 1er tag qui suit le tag parent.  Ex: div + p s'applique au 1er tag p qui suit la balise </div>
+        ~ s'applique à tous les tags qui suivent le tag parents sauf ceux imbriqués.  A un degré supérieur
+          au sibling (+). Ex: div ~ p s'appliquent à tous les tags suivant </div>
         Exemple:
         --------
         Descendant: tag tag (ex: div p). Affecte tous les tags p y compris ceux imbriqués.
