@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float elements</title>
+    <!--
+        La propriété clear replace l'élément dans sa position (flux) original.  Les valeurs peuvent être:
+        - right
+        - left
+        - both
+        On utilise la pseudo classe ::after qui applique la règle après l'élément utilisant cette pseudo classe.
+        on utilise les classes content:"" et display:block car la propriété clear s'applique à un élément de block.
+    -->
+    <style>
+        .content_float {
+            display: block;
+            background-color: silver;
+            padding: 5px;;
+        }
+        .clear_fix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .float_left{
+            display: block;
+            width: 400px;
+            height: 400px;
+            background-color: slateblue;
+            border: 1px solid #ccc;
+            float: left;
+        }
+        .float_right {
+            display: block;
+            width: 400px;
+            height:400px;
+            background-color: teal;
+            border:1px solid #ccc;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="content_float clear_fix">
+        <div class="float_left"></div>
+        <div class="float_right"></div>
+    </div>
+    <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque mollitia blanditiis exercitationem laboriosam iusto rerum corporis ullam quibusdam fuga alias, animi praesentium soluta odio odit deleniti voluptatibus aliquid velit. Adipisci.</p>
+    </div>
+</body>
+</html>
