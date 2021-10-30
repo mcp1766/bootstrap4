@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>characters measurements</title>
+</head>
+<!-- Measurements
+    Rem: calculer par rapport au tag html.  Ne se base pas sur l'élément parent pour calculer sa taille.
+    Em: calculer par rapport au tag body.   chaque enfant calcule sa taille par rapport à celle du parent.
+    Px: Mesure fixe.
+-->
+<style>
+    html {
+        font-size: 16px;
+    }
+    body {
+        font-size: 12px;
+    }
+    p{
+        font-size: 1.4rem;;
+        color: rgb(60, 64, 66);
+    }
+    h1 {
+        font-size: 1.2rem;
+    }
+    h3 {
+        font-size: 1.3em;
+    }
+    div {
+        font-size: 16px;;
+    }
+    div > p {
+        font-size: 1em;
+    }
+    div + p {
+        font-size: 0.8em;
+    }
+    div > div > p {
+        font-size: 22px;
+    }
+    p {
+        font-size: 22px;
+    }
+</style>
+<body>
+    <h1>Title calculated in rem</h1>
+    <p>Paragraph calcultead in rem.  This is the first line of a paragraph</p>
+    <h3>Title calculated in em</h3>
+    <div>
+        <p>Paragraph calculated in rem.  This is the first child of an div element</p>
+
+    </div>
+    <p>Paragraph calculated in em.  This is a child of a div element.</p>
+    <div>
+        <div>
+            <p>Paragraph inside a div child of another div element</p>
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+</body>
+</html>
