@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesudo classes</title>
+    <!-- 
+        link
+        visited
+        hover
+        active
+        text-decoration
+        list-style:first-child
+        list-style:nth-child
+        list-style:last-child
+     -->
+     <style>
+         a:visited {
+             text-decoration: none;
+             color: blueviolet;
+         }
+         a:link {
+             text-decoration: none;
+             color: red;
+         }
+         a:hover {
+             text-decoration: none;
+             color: orange;
+         }
+         a:active {
+             text-decoration:none;
+             color:rgb(141, 209, 124);
+             background-color: black;
+         }
+         .box-hello {
+             width:200px;
+             height:200px;
+             margin-left:15px;
+             background-color: cornflowerblue;
+             color: #faf9f9;
+             text-align: center;
+             position: relative;
+                         
+         }
+         .box-hello p {
+             display: none;
+             position: absolute;
+             top:50%;
+             left:50%;
+             margin-top: -10%;
+             margin-left: -15%;
+         }
+         .box-hello:hover{
+             background-color: darkgray;
+             color: #fafafa;
+             text-orientation: unset;
+         }
+         .box-hello:hover p {
+             display: block;
+         }
+         .box-hello p:hover {
+             font-size: 1.5em;
+         }
+         ul {
+            list-style: none;
+         }
+         ul li:first-child {
+             color:blanchedalmond;
+         }
+         ul li:nth-child(4) {
+             color: cornflowerblue;
+         }
+         ul li:last-child {
+             color:crimson
+         }
+     </style>
+</head>
+<body>
+    <p>
+        click on my <a href="">Link here</a> to get more informations
+    </p>
+    <div class="box-hello">
+        <p>
+            hello
+        </p>
+    </div>
+    <div>
+        <ul>
+            <li>element list nr 1</li>
+            <li>element list nr 2</li>
+            <li>element list nr 3</li>
+            <li>element list nr 4</li>
+            <li>element list nr 5</li>
+        </ul>
+    </div>
+</body>
+</html>
