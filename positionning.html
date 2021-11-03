@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positionnement</title>
+    <!-- 
+        On distingue :
+        static: positionnement par défaut.  Suit le flux normal
+        Relative.  Positionnement normal dans le flux.   On utilise les propriétés top/bottom/right/left
+        Absolute: Sort l'élément de son flux.  On utilise les propriétés top/bottom/right/left
+        Fixed: Positionnement par rapport à la fenêtre du navigateur.  On utilise les propriétés top/bottom/right/left
+    -->
+    <style>
+      .container {
+        background-color: #cacaca;
+        width: 800px;
+        height: 1200px;
+        position: relative;
+        padding: 15px;;
+      }
+      .box {
+        color: #fff;
+        text-transform: uppercase;
+        border: 1px solid #000;
+      }
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: blueviolet;
+        position: static;
+      }
+      .box2 {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(62, 91, 219);
+        position: relative;
+      }
+      .box3 {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(56, 19, 27);
+        position: absolute;
+        left: 50px;;
+      }
+      .box4 {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(9, 66, 18);
+        position: fixed;
+        right:50px
+      }
+    </style>
+  </head>
+  <body>
+      <div class="container">
+          <div class="box box1">Box 1 - static</div>
+          <div class="box box2">Box 2 - relative</div>
+          <div class="box box3">Box 3 - absolute</div>
+          <div class="box box4">Box 4 - fixed</div>
+      </div>
+  </body>
+</html>
