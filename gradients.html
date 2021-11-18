@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Gradients</title>
+	<link rel="stylesheet" href="">
+	<!-- 
+		linear-gradient permet la transition fluide entre couleurs.  Prend comme valeur (direction, couleur, couleur, couleur, ..)
+		  -> direction peut être:
+		     - to top bottom 
+		     - to bottom top 
+		     - to right bottom
+		     - to left top
+		     - to left bottom
+		     - to right top
+	 -->
+	 <style type="text/css">
+	 	.gradient {
+	 		width:500px;
+	 		height: 500px;
+	 		margin: 100px auto;
+	 		border: 1px solid black;
+	 		background-image: linear-gradient(to right bottom, yellow, green);
+	 	}
+	 	.grandient2 {
+	 		width: 500px;
+	 		height: 500px;
+	 		margin: 20px auto;
+	 		border: 1px solid black;
+	 		background: linear-gradient(rgba(220.63, 181.04, 130,.1), rgba(255,255,255,.1)), url("resources/Section 003 - Advanced CSS/Lecture 001 - Backgrounds - Part 1/img/image 1.jpeg") no-repeat center /cover;
+	 	}
+	 </style>
+</head>
+<body>
+	<div class="gradient"></div>
+	<div class="grandient2"></div>
+</body>
+</html>
