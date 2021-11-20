@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Transition effect</title>
+	<link rel="stylesheet" href="">
+	<!-- 
+	Transiton permet d'ajouter un effet lors d'un survol (hover).
+	transition property: définit sur quelle propriété s'applique l'effect
+	transition delay: définit le moment ou l'effet démarre
+	transition duration: définit la durée de l'effet
+	transition timing définit le type d'effet: ease, ease-in (démarrage lent), ease-out (fin lente), ease-in-out (début et fin lents), cubic-bézier (fu ction complexe voir le site curbic-bezier.com).
+
+	nb: curbic-bezier (a, b, c, d)
+
+	l'axe Y = a c
+	l'axe x = b d
+
+	a b = début
+	c d = fin
+
+	Au plus on s'éloigne des axes au plus lent sera l'animation.
+
+	Shorthand: transition: width 1s 1s linear
+
+	Peut prendre plusieurs propriétés séparées par une virgule.  (transition width 1s ease, background-color 5s linear)
+	 -->
+	 <style>
+	 	.box {
+	 		width: 200px;
+	 		height: 200px;
+	 		background-color: orange;
+	 		text-align: center;
+	 		color: #fff;
+	 		font-size: 1.5em;
+	 		/*transition-property: width, background-color, font-size;
+	 		transition-duration: 1s,1s,2s;
+	 		transition-timing-function: cubic-bezier(.82,.95,.41,.01), linear, ease;*/
+
+	 		transition: width 1s linear, background-color 2s ease, font-size 1s ease-in-out;
+	 	}
+	 	.box:hover {
+	 		width: 400px;
+	 		background-color: lightgrey;
+	 		font-size: 1.9em;
+	 	}
+	 </style>	
+</head>
+<body>
+	<div class="box">Transition</div>
+	
+</body>
+</html>
