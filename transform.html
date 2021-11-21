@@ -29,8 +29,11 @@
 		}
 
 		- transform: translate, translateX, translateY Déplace un élément sur l'axe X ou Y
-		- transform: rotate(xdeg) Rotation de l'élément.  Une valeur négative pivote l'élément dans le sens contraire des aiguilles d'une montre.
+		- transform: rotate(xdeg) Rotation de l'élément.  Une valeur négative pivote l'élément dans le sens contraire des aiguilles d'une montre.  Lorsque on utilise l'axe de X (ex 180deg) le texte devient inversé.
+		rotateZ() transforme l'élément sur les axes X et Y en même temps.
 		- transform: scale, scaleX, scaleY Dimensionne l'élément.  Une valeur négative diminue la taille de l'élément.
+		-transform: skew, skewX, skewY redimensionne l'élément de manière oblique sur l'axe X et Y
+
 	 -->
 	 <style>
 	 	.box {
@@ -64,6 +67,30 @@
 	 	.box3:hover {
 	 		transform: scale(-1%);
 	 	}
+	 	.box4 {
+	 		transition: transform 1s cubic-bezier(01,.73,.95,.91);
+	 	}
+	 	.box4:hover {
+	 		transform: skew(30deg, 20deg);
+	 	}
+	 	.box5 {
+	 		transition: transform 1s ease;
+	 	}
+	 	.box5:hover{
+	 		transform: rotateX(180deg);
+	 	}
+	 	.box6 {
+	 		transition: transform 1s ease;
+	 	}
+	 	.box6:hover{
+	 		transform: rotateY(180deg);
+	 	}
+	 	.box7 {
+	 		transition: transform 1s ease;
+	 	}
+	 	.box7:hover{
+	 		transform: rotateZ(180deg);
+	 	}
 	 </style>
 </head>
 <body>
@@ -72,5 +99,9 @@
 	<!-- transform rotate -->
 	<div class="box box2">rotate</div> 
 	<div class="box box3">scale</div> 
+	<div class="box box4">skew</div> 
+	<div class="box box5">rotateX <br>180°</div> 
+	<div class="box box6">rotateY <br>180°</div> 
+	<div class="box box7">rotateZ <br>180°</div> 
 </body>
 </html>
