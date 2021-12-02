@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positionnement</title>
+    <!-- 
+        On distingue :
+        static: positionnement par défaut.  Suit le flux normal.  Les propriétés top, right, bottom et left n'ont pas d'effet.  Il faut donc définir soit la position sur relative, absolute.
+        Relative.  Positionnement normal dans le flux.   On utilise les propriétés top/bottom/right/left
+        Absolute: Sort l'élément de son flux.  On utilise les propriétés top/bottom/right/left
+        Fixed: Positionnement par rapport à la fenêtre du navigateur.  On utilise les propriétés top/bottom/right/left
+        sitcky: position fixe jusq'au moment ou le container parent n'est plus visible sur la page.  Effet de scrolling.
+    -->
+    <style>
+      .container {
+        background-color: #cacaca;
+        width: 800px;
+        height: 400px;
+        position: relative;
+        padding: 15px;;
+      }
+      .box {
+        color: #fff;
+        text-transform: uppercase;
+        border: 1px solid #000;
+      }
+      .box1 {
+        width: 200px;
+        height: 50px;
+        background-color: blueviolet;
+        position: static;
+        /*z-index:999;*/
+      }
+      .box2 {
+        width: 200px;
+        height: 50px;
+        background-color: rgb(62, 91, 219);
+        position: relative;
+        /*z-index:2;*/
+      }
+      .box3 {
+        width: 200px;
+        height: 50px;
+        background-color: rgb(56, 19, 27);
+        position: absolute;
+        left: 50px;
+      }
+      .box4 {
+        width: 200px;
+        height: 50px;
+        background-color: rgb(9, 66, 18);
+        position: sticky;
+        top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+
+      <div class="container">
+          <div class="box box1">Box 1 - static</div>
+          <div class="box box2">Box 2 - relative</div>
+          <div class="box box3">Box 3 - absolute</div>
+          <div class="box box4">Box 4 - sticky</div>
+      </div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium a optio nulla asperiores qui. Reprehenderit enim eveniet dicta hic consectetur labore vitae dolorem, explicabo quos ut nostrum? Unde, totam. Harum incidunt impedit, iste distinctio iure debitis nobis necessitatibus earum velit vitae fugit culpa quas numquam quae inventore saepe nam ipsam possimus sit, architecto voluptates magnam quod maxime suscipit vero. Sequi odio amet optio corporis excepturi quibusdam sapiente ut unde iusto recusandae beatae explicabo tempora facere, suscipit totam cum eligendi inventore quaerat enim ab eaque autem sed quasi vero? Atque, odit nam magnam. Repellendus, excepturi, voluptas. Laborum nemo corrupti tempora laboriosam asperiores autem totam eligendi quam accusamus dignissimos. Modi temporibus debitis neque deserunt veritatis, voluptate quisquam placeat unde, sint, cumque quasi non atque libero tempora necessitatibus! Nulla illum natus inventore eaque iste mollitia beatae laborum rerum quae veniam, repellat consectetur, maiores voluptas pariatur illo obcaecati consequatur temporibus rem deserunt quam perspiciatis facere reprehenderit molestiae. Unde accusantium, quia sit error. Dicta aliquam commodi architecto deleniti blanditiis in corrupti repudiandae ipsum porro delectus ipsa cupiditate autem soluta, magni aut saepe consequuntur perspiciatis molestiae exercitationem nesciunt, placeat dolorem. Dignissimos earum, id nostrum aperiam aspernatur, ipsa animi atque labore nemo autem, nam, rerum? Reprehenderit officiis porro assumenda laboriosam corporis voluptatibus sint similique sed quae explicabo mollitia vero quo ratione nulla, labore maxime numquam aut repellat pariatur nihil officia iste! Quos veritatis eligendi ullam officia illo error perspiciatis, reprehenderit, tempora nesciunt repudiandae. Odio, nisi quisquam dolores. Hic ullam necessitatibus voluptates praesentium dolorum iusto sunt minima accusamus, autem similique exercitationem perspiciatis soluta, placeat cupiditate rerum alias quos consectetur tempora aliquid sapiente error temporibus quo facere neque, iste? Laboriosam modi sequi dolorum, aperiam voluptatum laborum obcaecati dolores iusto ratione similique sunt voluptatem voluptas, illo et, asperiores ullam. In similique accusamus doloremque odio cumque ipsam earum inventore. Sed minima magnam pariatur, aliquid quaerat suscipit molestias illo debitis odio id nostrum porro. Quos necessitatibus fugiat et, error unde dolorum, eaque, maxime numquam quod tempore neque, sunt? Maiores fugiat eum temporibus architecto ipsum deserunt maxime veritatis quibusdam in voluptas qui velit dolore eveniet mollitia officiis similique natus vel, ratione. Unde ipsa assumenda atque adipisci ullam voluptatum amet minus enim corporis iure necessitatibus earum sequi, debitis consequatur odit nostrum rem blanditiis quibusdam vitae totam eum tempora veniam. Accusamus, suscipit, itaque. Iste et, voluptatum dolore officia eos velit assumenda debitis accusantium beatae adipisci nulla delectus, vitae amet corporis voluptatibus unde voluptate magnam rerum obcaecati quo consequatur! Dicta, quas ea accusamus sapiente magni. Temporibus cum itaque inventore impedit fugiat ab nemo velit, dicta nesciunt soluta sed similique incidunt animi tempore ratione consequatur labore doloremque. Sapiente odit nostrum neque soluta totam. Dolore minus maxime aliquid, at itaque consectetur. Recusandae dolor, incidunt enim! Sunt natus provident nostrum, molestiae repellat exercitationem, deleniti quaerat culpa reiciendis dolor quasi. Recusandae odit, error provident ea itaque inventore a doloremque laboriosam soluta quod excepturi ratione quisquam. Ad illum voluptatum iusto exercitationem dolor, sed sequi, dolorem sit vitae odio reprehenderit in hic at delectus asperiores animi quia, quisquam eveniet, ratione ipsam dicta?
+  </body>
+</html>

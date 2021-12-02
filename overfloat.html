@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <!-- 
+    Overflow permet d'avoir diverses actions lorsque le contenu déborde du conteneur.
+    Overflow: visible est le défaut
+    Overflow:hidden cache le contenu débordant
+    Overflow: auto permet de défiler le contenu sans débordement.  Ajoute des barres de défilement H&V quand il le faut
+    Overflow: scroll:  Ajoute une bare de défilement par défaut.
+    Overflow-y Détermine si  le contenu débordant vers le bas du conteneur est visibile, caché, scroll ou auto..  Valeurs sont visible, hidden, scroll, auto
+    Overflow-x Détermine si le contenu débordant à droite du conteneur est visibile, caché, scroll, auto
+    
+    Dans le dernier exemple .box6 on voit que le text 3.1415926535897932384626433832795029 déborde sur l'axe des x, comme la valeur est placée sur auto, une barre de défilement est ajoutée.
+    -->
+    <style>
+        .textbox {
+            width:500px;
+            height:100px;
+            border: 1px solid #000;
+        }
+        .box1{
+            overflow: visible;
+            background-color: lightblue;
+            margin-bottom: 100px;
+        }
+        .box2 {
+            overflow: hidden;
+            background-color: #ddd;
+        }
+        .box3 {
+            overflow:auto;
+            background-color: rgb(175.69, 220.14, 130.49);
+        }
+        .box4 {
+            overflow: scroll;
+            background-color: rgb(230.1, 161.5, 120.53);
+        }
+        .box5 {
+            overflow-y:auto;
+            background-color: rgb(175.08, 185.27, 101.6);
+        }
+        .box6 {
+            overflow-x: auto;
+            background-color: rgb(27.891, 134.05, 195.23);
+            width: 100px;0px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="textbox box1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint omnis earum illum, nostrum eligendi repudiandae sapiente sequi animi illo, magnam a! Ipsum odit doloremque tenetur nesciunt cupiditate, velit dolores numquam similique itaque vel explicabo saepe, esse unde ea exercitationem veniam! Ut, architecto quo accusamus non qui dignissimos nesciunt voluptates asperiores! Aliquid cupiditate vitae dolor tempore deserunt iure labore provident facilis explicabo fugiat, sint consectetur cumque eveniet officia ipsam delectus minima. Quod nisi molestias quo sunt maiores officiis cupiditate quam eius.</div> 
+    <div class="textbox box2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint omnis earum illum, nostrum eligendi repudiandae sapiente sequi animi illo, magnam a! Ipsum odit doloremque tenetur nesciunt cupiditate, velit dolores numquam similique itaque vel explicabo saepe, esse unde ea exercitationem veniam! Ut, architecto quo accusamus non qui dignissimos nesciunt voluptates asperiores! Aliquid cupiditate vitae dolor tempore deserunt iure labore provident facilis explicabo fugiat, sint consectetur cumque eveniet officia ipsam delectus minima. Quod nisi molestias quo sunt maiores officiis cupiditate quam eius.</div>
+    <div class="textbox box3">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, natus porro ex amet dolorem quasi placeat animi quae magnam qui? Nulla modi officiis possimus, suscipit veniam id aliquid repudiandae, reiciendis laborum, asperiores aspernatur doloribus amet qui ad ab distinctio explicabo magni. Iusto laboriosam modi rem vel nisi blanditiis recusandae quod!
+    </div>
+    <div class="textbox box4">
+        Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Iusto, distinctio dolorem eos consequatur. Sit beatae nemo vel, nesciunt quis quia officiis eaque dicta dolor eveniet suscipit excepturi magni, velit distinctio error numquam eligendi quae eos blanditiis! Quae reprehenderit expedita possimus voluptas sunt, veniam, suscipit cum, est, beatae soluta accusamus eos.
+    </div>
+    <div class="textbox box5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem perspiciatis alias obcaecati aliquid tenetur hic sunt nisi mollitia reprehenderit et architecto aspernatur rem, temporibus maiores omnis atque, voluptatum, quasi sit natus facere magni distinctio repellat impedit. Adipisci illo, soluta deleniti dolorum cum nostrum, facilis veritatis quaerat aliquam sint est, accusantium.</div>
+    <div class="textbox box6">La valeur de PI est de 3.1415926535897932384626433832795029</div>
+</body>
+</html>
