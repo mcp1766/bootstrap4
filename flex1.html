@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<!-- 
+		flexbox remplce le float et permet un placement horizontal et vertical des éléments de la boite.
+		- display: flex et inline-flex (peu utilisé)
+		- flex-wrap: wrap | no-wrap (affiché sur 1 ou plusieurs lignes)
+		- flex-direction: On X axe : row (left to right) | row-reverse (right to left) | column (top to bottom) | column-reverse (bottom to top)
+		- flex-flow: wrap | no-wrap | row | columun | row-erverse | column-reverse.  Condensé de flax-wrap et flex-direction
+		- justify-content (axe X): flex-start, flex-end, center, space-between (de chaque côté de l'élément), space around (entre les éléments)
+		- align-content (axe Y): strectch, flex-start, flex-end, space-between, space-around
+		- align-items (sur les éléments enfants): flex-start, flex-end, center, baseline, stretch.
+
+		NB: flex-direction: row : main axis = X | column : main-axis= Y !!!!
+
+		Au niveau des enfants
+		- order: 0 | nombre.  Par défaut tous les éléments on t une valeur de 0.  Si on met une valeur négative, alors l'élément se placera en 1er dans l'ordre d'affichage.  Si on augmente la valeur alors l'élément se placera en dernier dans l'ordre d'affichage.  
+
+		Ex: A (0) B(0) C (0)
+		    C(-1) B (0) A (0)
+		    B(0) C(0) A(1)
+
+		- align-self: Sur l'axe X ou Y suivant flex-direction - auto, stretch, flex-start, flex-end, center, baseline.   Par défaut: auto.
+		- flex-grow (grandir la taille): 0, nombre - Par défaut: 0
+		- flex-shrink (reduire la taille): 0, nombre
+		- flex-basis: auto, length.  Indique la largeur (si direction est row) ou la hauteur (si direction est column).
+	 -->
+	 <style>
+		 .container {
+			 height:700px;
+			 margin-top: 50px;
+			 /* padding:20px 0; */
+			 background-color: orange;
+			 display: flex;
+			 flex-direction: column;
+			 flex-wrap: wrap;
+			 justify-content:  center;
+			 align-items: center;
+			 /*align-content: flex-end;*/
+		 }
+		 .item {
+			 /* padding: 30px; */
+			 width: 100px;
+			 margin:10px;
+			 background-color: rgb(41, 146, 129);
+			 color:white;
+			 text-align: center;
+			 font-size: 30px;
+			 /*flex: 0 2 auto;*/
+		 }
+		 .item-1 {
+		 	order: 1;
+		 	flex-grow: 1;
+		 	/*flex: 1 0 auto;*/
+		 }
+		 .item-5 {
+		 	order: -1;
+		 	align-self: flex-end;
+		 }
+	 </style>
+</head>
+<body>
+	<div class="container">
+		<div class="item item-1">A</div>	
+		<div class="item item-2">B</div>	
+		<div class="item item-3">C</div>	
+		<div class="item item-4">D</div>	
+		<div class="item item-5">E</div>	
+	</div>
+</body>
+</html>
