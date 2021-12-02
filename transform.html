@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Transform</title>
+	<link rel="stylesheet" href="">
+	<!-- 
+		box-sizing: par défaut la largeur et la hauteur s'applique au contenu (content-box).  Si il y a une bordure (border) ou du remplissage (padding), ces valeurs viennent s'ajouter à la largeur (width) ou hauteur (height).
+		Ex:
+		.box {
+		width:200px;
+		height:200px;
+		padding:10px;
+		width = 200+20
+		height = 200+20
+		}
+
+		box-sizing:border-box on assigne à la largeur (width) et hauteur (height) la bordure et le remplissage éventuel ce qui comprime la zone du contenu (content-box).  Souvent utilisé pour la mise en page des éléments.
+
+		Ex:
+		.box {
+		width: 200px;
+		height: 200px;
+		padding-top: 50px;
+		box-sizing: border-box;
+		width= 200px
+		height=150px + 50px (padding-top)  La zone de contenu est comprimée sur le dessus.
+		}
+
+		- transform: translate, translateX, translateY Déplace un élément sur l'axe X ou Y
+		- transform: rotate(xdeg) Rotation de l'élément.  Une valeur négative pivote l'élément dans le sens contraire des aiguilles d'une montre.  Lorsque on utilise l'axe de X (ex 180deg) le texte devient inversé.
+		rotateZ() transforme l'élément sur les axes X et Y en même temps.
+		- transform: scale, scaleX, scaleY Dimensionne l'élément.  Une valeur négative diminue la taille de l'élément.
+		-transform: skew, skewX, skewY redimensionne l'élément de manière oblique sur l'axe X et Y
+
+	 -->
+	 <style>
+	 	.box {
+	 		width: 200px;
+	 		height: 200px;
+	 		border: 1px solid black;
+	 		background-color: orange;
+	 		text-align: center;
+	 		margin: 100px auto;
+	 		color: white;
+	 		font-size:25px;
+	 		text-transform: uppercase;
+	 		padding-top:80px; /* Positione verticalement le texte */
+	 		box-sizing: border-box; /* Permet de centrer verticalement suite au padding-top*/
+	 	}
+	 	.box1 {
+	 		transition: transform 1s ease;
+	 	}
+	 	.box1:hover{
+	 		transform: translate(100px, 100px);
+	 	}
+	 	.box2 {
+	 		transition: transform 1s ease;
+	 	}
+	 	.box2:hover {
+	 		transform: rotate(-360deg);
+	 	}
+	 	.box3 {
+	 		transition: transform 1s cubic-bezier(.01,.73,.95,.91);
+	 	}
+	 	.box3:hover {
+	 		transform: scale(-1%);
+	 	}
+	 	.box4 {
+	 		transition: transform 1s cubic-bezier(01,.73,.95,.91);
+	 	}
+	 	.box4:hover {
+	 		transform: skew(30deg, 20deg);
+	 	}
+	 	.box5 {
+	 		transition: transform 1s ease;
+	 	}
+	 	.box5:hover{
+	 		transform: rotateX(180deg);
+	 	}
+	 	.box6 {
+	 		transition: transform 1s ease;
+	 	}
+	 	.box6:hover{
+	 		transform: rotateY(180deg);
+	 	}
+	 	.box7 {
+	 		transition: transform 1s ease;
+	 	}
+	 	.box7:hover{
+	 		transform: rotateZ(180deg);
+	 	}
+	 </style>
+</head>
+<body>
+	<!-- transform translate -->
+	<div class="box box1">translate</div> 
+	<!-- transform rotate -->
+	<div class="box box2">rotate</div> 
+	<div class="box box3">scale</div> 
+	<div class="box box4">skew</div> 
+	<div class="box box5">rotateX <br>180°</div> 
+	<div class="box box6">rotateY <br>180°</div> 
+	<div class="box box7">rotateZ <br>180°</div> 
+</body>
+</html>

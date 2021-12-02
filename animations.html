@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Animations</title>
+	<link rel="stylesheet" href="">
+	<!-- 
+	@keyframes définit les animations 
+	animation_name et animation_duration lie l'animation et sa durée.
+	animation-delay: temps avant le déroulement de l'animation
+	animation-iteration-count: nombre de fois pour jouer l'animation
+	animation-direction (normal, reverse, alternate, alternate-reverse) pour les 2 dernier il faut mettre animation-iteration-count sur 2 au minimum.
+	animation-timing-function: linear (même vitesse début et fin), ease-in, ease-out, ease-in-out, cubic-bezier
+	animation-fill-mode: forwards, backwards, both, none L'animation commence avec les valeurs de la 1er keyframe (0% ou from) = backwards ou de la derniere keyframe = forwards.  None annule et remet l'élément à sa position initiale à la fin de l'animation.
+	Pour @keyframes on définit un début et une fin soit avec les mots clés From et To ou avec des % (ce qui est plus flexible pour ajouter d'autres effets).
+
+	Shorthand: animation: name duration timing delay iteration-count direction fill-mode
+	 -->
+	 <style>
+	 	.box{
+	 		width: 200px;
+	 		height: 200px;
+	 		background-color: green;
+	 		position:relative;/* pour l'animation. Position initiale = left:0 et top:0 */
+	 		text-align: center;
+	 		text-transform: uppercase;
+	 		padding-top:80px;
+	 		box-sizing: border-box;
+	 		animation-name: anim;
+	 		animation-duration: 4s; /* comme on a 4s on divise 100%/4 donc chaque effet se produira à 25% */
+	 		animation-delay: 2s;
+	 		animation-iteration-count: 2;
+	 		animation-direction: alternate;
+	 		animation-timing-function: ease-in-out;
+	 		animation-fill-mode: both; /* ici on démarre à 0/200px et se termine à 200px/0; l'animation ne revient 
+	 		pas à 0/0 position initiale */
+	 	}
+	 	@keyframes anim {
+	 		0% {
+	 			top:0;
+	 			left:200px;
+	 			background-color: green;
+	 		}
+	 		25% {
+	 			top:0;
+	 			left:500px;
+	 			background-color: royalblue;
+	 		}
+	 		50% {
+	 			top:200px;
+	 			left:500px;
+	 			background-color: lightgrey;
+	 		}
+	 		75% {
+	 			top:200px;
+	 			left:0;
+	 			background-color: purple;
+	 		}
+	 		100% {
+	 			top:200px;
+	 			left:0;
+	 			background-color: magenta;
+	 		}
+	 	}
+	 </style>
+</head>
+<body>
+	<div class="box">Animation</div>
+</body>
+</html>

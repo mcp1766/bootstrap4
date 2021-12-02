@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Shadows</title>
+	<!-- 
+		text-shadow: valeur1 valeur2 valeur3 valeur 4
+		             valeur1 : définit le décalage en px horizontal (valeur négative décale vers la gauche)
+		             valeur2 : définit le décalage en px vertical (valeur négative décale vers le haut)
+		             valeur3 : définit le blow (effet trouble) en px
+		             valeur4 : définit la couleur de l'ombrage.
+
+		box-shadow: idem pour les boites.
+
+		transition: propriété à transiter delais durée effet (ease, ease-in-out, ease-out, linear)
+
+		NB: pour redimensionner une image dans un bloc (ex: div) il faut cibler le tag img et pas seulement le parent conteneur (ici on a ciblé .card img).
+
+		On peut appliquer un effet de hover en utilisant la même propriété box-shadow et en modifiant les valeurs (ex: .card hover (box-shadow: 10px 10px 20px #eee)).
+	 -->
+	<link rel="stylesheet" href="">
+	<style>
+		.heading {
+			font-family: Trebuchet MS, sans-serif;
+			font-size: 1.8em;
+			color: darkgreen;
+			text-align: center;
+			text-shadow: 3px 3px 10px darkgrey;
+		}
+
+		.card {
+			width: 400px;
+			background-color: lightgrey;
+			padding: 5px;
+			margin: 100px auto;
+			text-align: center;
+			box-shadow: 5px 5px 10px rgb(127.5, 127.5, 127.5);
+			transition: box-shadow 0.5s 0.5s linear;
+		}
+		.card img {
+			width: 100%;
+		}
+		.card:hover {
+			box-shadow: 10px 10px 20px rgb(31.875, 31.875, 31.875);
+
+		}
+	</style>
+</head>
+<body>
+	<h1 class="heading">This is a heading</h1>
+	<div class="card">
+		<img src="resources/Section 003 - Advanced CSS/Lecture 001 - Backgrounds - Part 1/img/image 1.jpeg" alt="">
+		<h2>Shop</h2>
+	</div>
+</body>
+</html>

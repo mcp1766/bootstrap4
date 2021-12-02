@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Backgrounds</title>
+	<link rel="stylesheet" href="">
+
+	<!-- 
+
+	Background-image: url(path) indique le chemin vers le répertoire de l'image.  Si le nom du répertoire et ou de l'image contient des espaces alors il faut utiliser des guillemets avec url("").
+
+	Background-size: indique la taille de l'image.  S'exprime en px, %, cover, auto
+
+	Background-position.  Calculé pa rapport à la bordure du conteneur.  Se place avec les  valeurs left/right top/bottom, center ou exprimé en px. Ex: background-position:10% 90% équivaut à 10% décalé de la gauche et le reste (90%) vers la droite et 10% décalé du dessus et le reste (90%) vers le bas.
+
+	Background-attachment: fixed permet d'avoir un effet parallax.  La position de l'image est calculée par rapport au viewport.
+
+	Background-origin: indique l'origine de l'emplacement de l'élément (border, padding ou content box
+
+	Background-clip: indique la manière dont lélément s'étend sous la boite de bordure, la boite de remplissage (padding) ou la boite de contenu (conten-box).
+
+	background: [color] url() [repeat/no-repart] position /size Ex: background: green utl(" ") no-repaet center /cover
+
+	background: url(" ") [repeat/no_repeat] position / size, url(" ") [repeat/no-repeat] position /size ==> placer plusieurs imagnes dans la boite.
+ 
+	nb: si l'image est plus grande que le contenur, elle sera positionnée du bord gauche supérieur vers le bord droit inférieur.
+	 -->
+	<style>
+		div {
+			width: 500px;
+			height: 500px;
+			border: 1px solid red;
+			color: white;
+			background:  url("resources/Section 003 - Advanced CSS/Lecture 001 - Backgrounds - Part 1/img/image 1.jpeg") no-repeat 10% 0% /200px, url("resources/Section 003 - Advanced CSS/Lecture 001 - Backgrounds - Part 1/img/image 1.jpeg") no-repeat right bottom /200px;
+			/*background-image: url("resources/Section 003 - Advanced CSS/Lecture 001 - Backgrounds - Part 1/img/image 1.jpeg");*/
+			margin: 100px auto;
+			/*background-repeat: no-repeat;*/
+			/*background-position: center;*/
+			/*background-size:cover;*/
+			background-origin: border-box;
+			/*background-clip: content-box;*/
+			/*background-size: cover;*/
+			/*background-attachment: fixed;*/
+			text-align: center;
+			text-transform: uppercase;
+			padding:60px;
+		}
+	</style>
+</head>
+<body>
+	<div>hello world</div>
+	<p>Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Atque, assumenda voluptatem tenetur soluta alias porro laudantium natus neque vitae architecto magnam autem eligendi ut aspernatur quia explicabo! Hic, itaque officiis, vitae est, blanditiis libero voluptates sequi, laboriosam totam ab iste a facilis asperiores sapiente. Atque sapiente placeat molestias accusantium dicta perspiciatis accusamus nam architecto maiores laudantium repudiandae illo dolore aperiam vel natus saepe ullam magnam nisi dolorem, dolores explicabo ex! Sunt optio nemo consequuntur impedit, adipisci quo beatae ducimus natus, excepturi atque facilis ipsa culpa quibusdam itaque voluptas esse mollitia doloremque aspernatur aperiam temporibus amet reprehenderit eos architecto obcaecati! Molestias quaerat ipsum temporibus. Minus dolor, ullam ab? Obcaecati, minus, fugit. Explicabo corrupti, deserunt sunt, magnam quod fuga. Nemo incidunt consequatur quo unde dolore. Praesentium veniam similique consectetur, perspiciatis at earum illo hic rem porro? Suscipit quis quaerat ea vel assumenda quisquam labore molestias sint. Laborum ipsum voluptatum nobis modi id ea provident numquam nesciunt fuga vitae, in non expedita. Nesciunt, repellendus velit voluptas dicta voluptatibus voluptatem accusamus voluptate sunt amet dolorem quae expedita ipsam, explicabo cupiditate harum corrupti tenetur at odio perspiciatis alias aliquid, ipsum ut. Atque necessitatibus libero quasi ipsum, accusamus hic voluptates doloremque, dolore pariatur porro est sapiente?</p>
+	
+</body>
+</html>
