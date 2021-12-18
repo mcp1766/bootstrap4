@@ -352,3 +352,5 @@ MigrationBackup/
 # Other files
 .gitignore
 test*
+.idea/
+projet1/
