@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--
+        On définit les polices à utiliser via Google Fonts et les icones de polices avec Fontawesome. On définit le lien vers notre feuille de style.  On définit également une icone pour le titre de la page (utiliser shortcut icon au lieu de stylesheet dans le lien).
+        -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grand Hotel</title>
+        <link rel="shortcut icon" href="img/crown.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/aefc040dfd.js" crossorigin="anonymous"></script>
+    </head>
+    <!-- Structure du site
+    Partie 1 - Navigation
+    navbar (div)
+    |---1-- sidebar (div)
+    |---1a--- menu-icon (div.menu-icon)
+    |--------| div.line lineX (*3)
+    |---1b-- social-icon-list (ul)
+    |---------| li
+    |------------| a (social-icon-link)
+    |---------------| i (fab fa-facebook-twitter-google-plus-g - instagram)
+    |---1c-- year (p)
+    |---2-- navigation (nav)
+    |---2a------| navigation-heading (div)
+    |---------------| h1
+    |---------------| form (navigation-search)
+    |------------------| input (navigation-search-input)
+    |------------------| button (navigation-search-btn)
+    |------------------| i (fas fa-search)
+    |----2b-----| nagigation-list (ul)
+    |-------------| li (navigation-item)
+    |----------------| a (navigation-link) * 5 (home/about us/rooms/events/customers/contact)
+    |----2c-----| copyright (div)
+    |------------| p
+    -->
+    <body>
+        <!-- navbar  -->
+        <div class="navbar">
+            <input type="checkbox" class="checkbox" id="click" hidden>
+            <!-- sidebar -->
+            <div class="sidebar">
+                <label for="click">
+                    <div class="menu-icon">
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                        <div class="line line-3"></div>
+                    </div>
+                </label>
+                <ul class="social-icons-list">
+                    <li>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link"><i class="fab fa-google-plus-g"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+                <div class="year">
+                    <p>2018</p>
+                </div>
+            </div>
+            <!-- end of sidebar -->
+            <!-- Navigation (navbar) -->
+            <nav class="navigation">
+                <!-- header -->
+                <div class="navigation-heading">
+                    <h1>Grand Hotel</h1>
+                    <form action="" class="navigation-search">
+                        <input aria-label="" type="text" placeholder="Search" class="navigation-search-input">
+                        <button class="navigation-search-btn">
+                        <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                <!-- menu items -->
+                <ul class="navigation-list">
+                    <li class="navigation-item"><a href="#" class="navigation-link">home</a></li>
+                    <li class="navigation-item"><a href="#" class="navigation-link">about us</a></li>
+                    <li class="navigation-item"><a href="#" class="navigation-link">rooms</a></li>
+                    <li class="navigation-item"><a href="#" class="navigation-link">events</a></li>
+                    <li class="navigation-item"><a href="#" class="navigation-link">customers</a></li>
+                    <li class="navigation-item"><a href="#" class="navigation-link">contact</a></li>
+                </ul>
+                <!-- Copyright -->
+                <div class="copyright">
+                    <p>&copy 2018 - Grand Hotel - All Right Reserved</p>
+                </div>
+            </nav>
+        </div>
+        <!-- end of navbar  -->
+    </body>
+</html>
